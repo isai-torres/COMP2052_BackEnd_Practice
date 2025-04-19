@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Tarea 3{% endblock %}
+
+{% block content %}
+  <h2>{{ title }}</h2>
+  <p>{{ description }}</p>
+
+  <h2>requisitos:</h2>
+
+  <ul>
+    {% for requisito in requisitos %}
+      <li>{{ requisito }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

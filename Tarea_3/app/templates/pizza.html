@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Tarea 3 Pizza{% endblock %}
+
+{% block content %}
+  <h2>{{ title }}</h2>
+  <p>{{ description }}</p>
+
+  <ul>
+    {% for topping in toppings %}
+      <li>{{ topping }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

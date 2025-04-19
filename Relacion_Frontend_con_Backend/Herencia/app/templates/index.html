@@ -1,0 +1,11 @@
+<!-- Esta linea especifica que esta plantilla hereda de la plantilla 'base.html' -->
+{% extends 'base.html' %}
+
+<!-- Esta linea especifica que el bloque 'title' de la plantilla base se heredara y sobrescribirá con el texto 'Inicio' -->
+{% block title %}Inicio{% endblock %}
+
+<!-- Esta linea especifica que el bloque 'content' de la plantilla base se sobrescribirá con <h2>Bienvenidos<h2/> y  <p>Este es un contenido dinámico generado por Flask y Jinja2.</p>-->
+{% block content %}
+  <h2>Bienvenidos</h2>
+  <p>Este es un contenido dinámico generado por Flask y Jinja2.</p>
+{% endblock %}

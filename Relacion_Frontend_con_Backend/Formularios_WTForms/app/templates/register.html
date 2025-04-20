@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+  <title>Registro</title> 
+</head>
+<body>
+
+  <h1>Formulario de Registro</h1> 
+
+  <!-- Formulario que envía los datos usando el método POST -->
+  <form method="POST">
+
+    <!-- Etiqueta para el campo de nombre de usuario -->
+    <label for="username">Nombre de usuario:</label>
+
+    <!-- Campo de entrada de texto para el nombre de usuario -->
+    <input type="text" name="username" id="username">
+
+    <!-- Si existe una variable `error` (pasada desde Flask), muestra el mensaje en rojo -->
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <!-- Botón para enviar el formulario -->
+    <button type="submit">Registrarse</button>
+
+  </form>
+
+</body>
+</html>

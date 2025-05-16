@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}Entrar{% endblock %}
+{% block content %}
+<form method="POST" novalidate>
+  <div class="card col-10 col-md-6 mx-auto mt-5">
+    <div class="card-header"><strong>Iniciar Sesión</strong></div>
+    <div class="card-body">
+      {{ form.hidden_tag() }}
+      <div class="mb-3">{{ form.email.label }} {{ form.email(class="form-control") }}</div>
+      <div class="mb-3">{{ form.password.label }} {{ form.password(class="form-control") }}</div>
+    </div>
+    <div class="card-footer">{{ form.submit(class="btn btn-primary") }}</div>
+  </div>
+  <p class="text-center pt-2">¿No tienes cuenta? <a href="{{ url_for('auth.register') }}">Regístrate</a></p>
+</form>
+{% endblock %}

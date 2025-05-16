@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block title %}{{ editar and "Editar Ticket" or "Nuevo Ticket" }}{% endblock %}
+{% block content %}
+<h2 class="mb-4">{{ editar and "Editar Ticket" or "Nuevo Ticket" }}</h2>
+
+<form method="POST" novalidate>
+  {{ form.hidden_tag() }}
+
+  <!-- Asunto -->
+  <div class="mb-3">
+    {{ form.asunto.label(class="form-label") }}
+    {{ form.asunto(class="form-control", placeholder="Asunto del ticket") }}
+  </div>
+
+  <!-- Descripción -->
+  <div class="mb-3">
+    {{ form.descripcion.label(class="form-label") }}
+    {{ form.descripcion(class="form-control", placeholder="Describe el problema") }}
+  </div>
+
+  <!-- Prioridad -->
+  <div class="mb-3">
+    {{ form.prioridad.label(class="form-label") }}
+    {{ form.prioridad(class="form-select") }}
+  </div>
+
+  <!-- Técnico asignado -->
+  <div class="mb-3">
+    {{ form.tecnico_id.label(class="form-label") }}
+    {{ form.tecnico_id(class="form-select") }}
+  </div>
+
+  <!-- Botón -->
+  <div class="mb-3">
+    {{ form.submit(class="btn btn-primary") }}
+  </div>
+</form>
+{% endblock %}

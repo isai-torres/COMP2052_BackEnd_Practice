@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Cambiar Estado{% endblock %}
+{% block content %}
+<h3 class="mb-4">Cambiar Estado del Ticket</h3>
+
+<form method="POST">
+  {{ form.hidden_tag() }}
+
+  <div class="mb-3">
+    <label><strong>Asunto:</strong></label>
+    <p>{{ ticket.asunto }}</p>
+  </div>
+
+  <div class="mb-3">
+    {{ form.estado.label(class="form-label") }}
+    {{ form.estado(class="form-select") }}
+  </div>
+
+  <div class="mb-3">
+    {{ form.submit(class="btn btn-primary") }}
+  </div>
+</form>
+{% endblock %}

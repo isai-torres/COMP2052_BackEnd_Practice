@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<div class="text-center">
+  <h1 class="mt-5">Bienvenido al Sistema de Seguimiento de Tickets</h1>
+  {% if current_user.is_authenticated %}
+  <p class="lead">Ve al panel de control para gestionar tus tickets.</p>
+  {% else %}
+  <p class="lead text-secondary">Por favor inicia sesión o regístrate para comenzar.</p>
+  {% endif %}
+</div>
+{% endblock %}
